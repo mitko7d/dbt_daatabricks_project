@@ -6,7 +6,7 @@ sources:
       - name: orders
         columns:
           - name: id
-            tests:
+            data_tests:
               - unique:
                  config:
                   severity: warn
@@ -16,7 +16,7 @@ sources:
       - name: products
         columns:
           - name: id
-            tests:
+            data_tests:
               - unique:
                  config:
                   severity: warn
@@ -26,7 +26,7 @@ sources:
       - name: reviews
         columns:
           - name: id
-            tests:
+            data_tests:
               - unique:
                  config:
                   severity: warn
@@ -36,7 +36,7 @@ sources:
       - name: users
         columns:
           - name: id
-            tests:
+            data_tests:
               - unique:
                  config:
                   severity: warn

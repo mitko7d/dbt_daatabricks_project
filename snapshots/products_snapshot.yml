@@ -6,3 +6,17 @@ snapshots:
       unique_key: id
       strategy: timestamp
       updated_at: created_at
+    columns:
+      - name: id
+        data_tests:
+          - unique:
+              where: "dbt_valid_to is null"
+              severity: warn
+      # - name: category
+      #   data_tests:
+      #     - unique:
+      #        config:
+      #         warn_if: ">1"
+      #         error_if: ">3"
+      #         store_failures: true
+
