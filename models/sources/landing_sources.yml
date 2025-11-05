@@ -1,6 +1,9 @@
 sources:
   - name: landing
-    database: dimitar_dbt_project_catalog
+    database: |
+      {%- if target.name == "prod" -%} dimitar_dbt_project_catalog_prod
+      {%- else -%} dimitar_dbt_project_catalog
+      {%- endif -%}
     schema: landing
     tables:
       - name: orders
