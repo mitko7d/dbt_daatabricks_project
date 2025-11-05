@@ -45,7 +45,7 @@ models:
       +schema: gold
 
 seeds:
-  dbt_databricks_project
+  dbt_databricks_project:
     +schema: bronze
 flags:
   require_generic_test_arguments_property: true
